@@ -1,0 +1,8 @@
+                Scanner sc=new Scanner(System.in);
+                int a=sc.nextInt();int b=sc.nextInt();
+                BigInteger ans=new BigInteger("1");
+               // long ans=(long)Math.pow(a,b);
+                for(int i=1;i<=b;i++){
+                    ans=ans.multiply(BigInteger.valueOf(a));
+                }
+                System.out.print(ans);
