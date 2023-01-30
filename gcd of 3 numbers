@@ -1,0 +1,24 @@
+public class Solution {
+    
+    static long getHcf(long a,long b){
+        if(a==0)
+            return b;
+        else   
+        return getHcf(b%a,a);
+    }
+    static long getLcm(long a,long b){
+        return (a*b)/getHcf(a,b);
+    }
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc=new Scanner(System.in);
+        long a=sc.nextLong();
+        long b=sc.nextLong();
+        long c=sc.nextLong();
+        long lcm=getLcm(a,getLcm(b,c));
+        //long lcm=(a*b*c)/hcf;
+        
+        System.out.print(lcm);
+    }
+}
